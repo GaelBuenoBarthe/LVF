@@ -1,0 +1,76 @@
+:root {
+  --blue: #0b0cac;
+  --red: #fd0808;
+  --black: #000;
+  --white: #fff;
+  --background: #ededed;
+}
+
+/*footer*/
+
+footer {
+  background-color: white;
+  padding: 1em;
+}
+.div-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ul-box {
+  margin: 0 0 0 3.5em;
+  text-align: center;
+  font-family: "Lobster two", sans-serif;
+}
+.div-title-tab h3 {
+  margin: 0 0 0.5em 0;
+  color: var(--red);
+}
+.ul-box ul li a {
+  text-decoration: none;
+  color: var(--blue);
+}
+.div-social-tab {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-social-tab img {
+  width: 30px;
+  height: 30px;
+  margin: 0 1em 0 0;
+}
+.div-logo img {
+  width: 80px;
+  height: 80px;
+  margin: 0 1em 0 1em;
+}
+
+/* couleurs icones */
+
+.icon0{
+  filter: invert(70%) sepia(55%) saturate(6953%) hue-rotate(179deg) brightness(104%) contrast(97%);
+}
+
+.icon2{
+  filter: invert(18%) sepia(77%) saturate(6926%) hue-rotate(15deg) brightness(103%) contrast(110%);
+}
+
+.icon3{
+  filter: invert(24%) sepia(55%) saturate(3353%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+@media screen and (max-width: 992px) {
+  .div-social-tab {
+    display: flex;
+    margin: 0 1em 0 0;
+  }
+  .div-social-tab img {
+    width: 100%;
+  }
+  .div-icon-tab {
+    display: flex;
+    flex-direction: row;
+  }
+}

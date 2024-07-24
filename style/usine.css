@@ -1,0 +1,370 @@
+:root {
+  --blue: #0b0cac;
+  --red: #fd0808;
+  --black: #000;
+  --white: #fff;
+  --background: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lobster Two", fantasy;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+body {
+  background-color: var(--background);
+}
+
+/*Image qui prend toute la largeur*/
+.wide {
+  width: 100%;
+}
+
+.content-text p {
+  line-height: 1.2em;
+  margin-bottom: .8em;
+}
+
+.content-text {
+  max-width: 50em;
+  margin: auto;
+}
+
+h2 {
+  color: var(--blue);
+  font-size: 2em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.container-title {
+  background-image: url("../assets/imgs/ouvrier.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 0 2.5em;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.container-title h1 {
+  font-size: 80px;
+  color: var(--blue);
+  margin: 0 0 5px 0;
+  z-index: 1;
+}
+.container-title span {
+  color: var(--red);
+}
+
+.button-design {
+  width: 150px;
+  height: 50px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.6);
+  background-image: linear-gradient(180deg, white, white),
+    linear-gradient(180deg, var(--blue), var(--red));
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  margin: 1.75rem 0 0 0;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-title .overlay .verticalLine {
+  width: 250px;
+  border: 1px solid var(--red);
+  text-align: center;
+  margin: 10px auto;
+}
+
+.verticalLine {
+  width: 250px;
+  border: 1px solid var(--red);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.horizontalLine {
+  width: 0;
+  height: 80px;
+  border-right: 2px solid var(--red);
+  margin: 10px auto;
+}
+section {
+  margin: 2em 0 2em 0;
+}
+.container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-text {
+  padding: 2em;
+}
+.picture-content-title img {
+  width: 850px;
+  height: 500px;
+}
+
+.second-container h2 {
+  color: var(--blue);
+  font-size: 30px;
+  text-align: center;
+}
+.container-box {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  align-items: center;
+}
+.picture-content-one img {
+  width: 35rem;
+  height: auto;
+}
+.content-about-one, .content-about-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.content-about-one p, .content-about-two p {
+  width: 100%;
+}
+
+.content-about-one ul li {
+  text-align: end;
+}
+
+.picture-content-two img {
+  width: 43.75rem;
+  height: 25rem;
+}
+
+.container-picture-three {
+  text-align: center;
+}
+.container-picture-three h3 {
+  color: var(--blue);
+  margin: 0 0 1.5rem 0;
+}
+.container-picture-three img {
+  width: 43.75rem;
+  height: 25rem;
+}
+.container-content-three {
+  display: flex;
+  padding: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border: 2px solid var(--blue);
+  display: flex;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 1.5em;
+}
+form h3 {
+  text-align: center;
+  color: var(--blue);
+  margin: 0 0 1em 0;
+}
+label {
+  display: none;
+}
+input,
+textarea {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 2px solid var(--red);
+}
+
+form .button-design {
+  margin: 0 auto;
+}
+/*style pour le défilement transition*/
+.reveal-loaded .reveal [class*="reveal-"] {
+  opacity: 0 !important;
+  animation: none !important;
+  transition: 0s !important;
+}
+
+.reveal-loaded [class*="reveal-"] {
+  animation: revealAnimation 1s cubic-bezier(0.5, 0, 0, 1) both;
+}
+
+.reveal-loaded .reveal-2 {
+  animation-delay: 0.1s;
+}
+
+.reveal-loaded .reveal-3 {
+  animation-delay: 0.2s;
+}
+
+.reveal-loaded .reveal-4 {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-loaded [class*="reveal-"] {
+    animation: none !important;
+  }
+}
+
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-title {
+    width: 100%;
+    height: 50vh;
+  }
+  .container-title h1 {
+    font-size: 3em;
+  }
+  .container-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-text {
+    margin: 10px auto;
+    width: 70%;
+    text-align: justify;
+  }
+  .picture-content-title img {
+    width: 100%;
+    height: auto;
+  }
+  .picture-content-one img {
+    width: 100%;
+    height: auto;
+  }
+  .content-about-one .button-design {
+    margin: 1em 0 0 1em;
+  }
+  .content-about-two .button-design {
+    margin: 1em 1em 0 0;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  .content-about-one,
+  .content-about-two {
+    margin: 0 1em 0 1em;
+  }
+  .picture-content-two img {
+    width: 100%;
+    height: auto;
+  }
+  .container-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-picture-three img {
+    width: 100%;
+    height: auto;
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-content-three {
+    margin: 1em auto;
+  }
+  .threeBis {
+    display: flex;
+    flex-direction: column;
+  }
+  .threeBis .content-about-two {
+    order: 1;
+  }
+  .threeBis .content-about-two {
+    order: 2;
+  }
+}
+
+/*** MEDIA QUERIES GENERAUX ***/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.1em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 1.25em;
+  }
+}
+/*Ecran Antho*/

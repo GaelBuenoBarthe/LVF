@@ -1,0 +1,138 @@
+:root {
+  --blue: #0b0cac;
+  --red: #fd0808;
+  --black: #000;
+  --white: #fff;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+}
+
+#logo {
+  width: 150px;
+  height: 80px;
+}
+
+#logo1{
+  width:80px;
+  height: 80px;
+  display:none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.navlinks ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lobster Two", fantasy;
+  font-size: 17px;
+}
+/*ligne au survol de la souris*/
+.navlinks ul li a {
+  position: relative;
+}
+.navlinks ul li a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--red);
+  /* Couleur du trait */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s ease;
+}
+
+/* Au survol du lien, on élargi le trait */
+.navlinks ul li a:hover::before {
+  width: 100%;
+  /* Largeur maximale du trait */
+}
+.navlinks ul li {
+  margin: 0 40px 0 0;
+}
+
+.navlinks ul li a {
+  color: var(--blue);
+}
+
+.active {
+  color: var(--red) !important;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+/* Gestion mobiles */
+
+@media (max-width: 800px) {
+  #icons {
+    display: block;
+    margin: 0 1em 0 0;
+  }
+
+  #icons:before {
+    content: "\2630";
+    z-index: 9;
+    font-size: 2em;
+    color: var(--blue)
+  }
+
+  .activeBurger #icons:before {
+    content: "\2715";
+    z-index: 10;
+  }
+  .navbar {
+    height: 130px;
+  }
+  #logo{
+    display:none;
+  }
+  .logo2{
+    position: absolute;
+    margin: 0 1em 0 1em;
+  }
+  #logo1 {
+    display: block;
+    
+  }
+  nav ul {
+    z-index: 5;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+
+    transition: 0.25s;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 3px 0;
+  }
+
+  nav.activeBurger ul {
+    left: 32%;
+    width: 50%;
+  }
+}
